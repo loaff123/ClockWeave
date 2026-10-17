@@ -14,6 +14,18 @@ from clockweave.extract import extract
 
 ROOT=Path(__file__).resolve().parents[1]
 
+def test_loopback_server_startup_does_not_resolve_hostname(monkeypatch):
+    pytest.importorskip('opentelemetry.sdk.trace')
+    spec=importlib.util.spec_from_file_location('clockweave_capture_test',ROOT/'examples'/'loopback'/'capture.py')
+    module=importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    def forbidden_lookup(*args,**kwargs):
+        raise AssertionError('numeric loopback startup must not perform reverse DNS')
+    monkeypatch.setattr('socket.getfqdn',forbidden_lookup)
+    with module.LoopbackHTTPServer(('127.0.0.1',0),module.BaseHTTPRequestHandler) as server:
+        assert server.server_name=='127.0.0.1'
+        assert server.server_port==server.server_address[1]>0
+
 def test_real_restart_reusable_capture(tmp_path):
     pytest.importorskip('opentelemetry.sdk.trace')
     script=ROOT/'examples'/'loopback'/'capture.py'

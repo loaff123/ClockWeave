@@ -18,6 +18,7 @@ import time
 import urllib.request
 import uuid
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from socketserver import TCPServer
 from importlib.metadata import version
 from google.protobuf.json_format import MessageToDict
 from opentelemetry import trace
@@ -31,6 +32,13 @@ from opentelemetry.exporter.otlp.proto.common.trace_encoder import encode_spans
 from opentelemetry.proto.collector.trace.v1.trace_service_pb2 import ExportTraceServiceRequest
 
 PROP=TraceContextTextMapPropagator()
+
+class LoopbackHTTPServer(ThreadingHTTPServer):
+    """Bind the numeric loopback endpoint without reverse-DNS dependencies."""
+    def server_bind(self):
+        TCPServer.server_bind(self)
+        self.server_name=self.server_address[0]
+        self.server_port=self.server_address[1]
 
 class Collector(SpanExporter):
     def __init__(self):self.spans=[];self.lock=threading.Lock()
@@ -90,7 +98,7 @@ def service(domain,epoch,offset,connection,output):
                 # Qualified boundary: span ends before releasing any response bytes.
                 clock.end(span)
             self.send_response(200);self.send_header('Content-Length','2');self.end_headers();self.wfile.write(b'ok');self.wfile.flush()
-    server=ThreadingHTTPServer(('127.0.0.1',0),Handler)
+    server=LoopbackHTTPServer(('127.0.0.1',0),Handler)
     def control():
         try:connection.recv()
         except EOFError:pass

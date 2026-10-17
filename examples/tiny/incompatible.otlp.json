@@ -1,0 +1,217 @@
+{
+  "resourceSpans": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "clockweave.clock.domain",
+            "value": {
+              "stringValue": "A"
+            }
+          },
+          {
+            "key": "clockweave.clock.epoch",
+            "value": {
+              "stringValue": "driver"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "clockweave.loopback"
+          },
+          "spans": [
+            {
+              "traceId": "00000000000000000000000000000001",
+              "spanId": "0000000000000002",
+              "name": "call",
+              "kind": 3,
+              "startTimeUnixNano": "1800000000000000001",
+              "endTimeUnixNano": "1800000000000000011"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "clockweave.clock.domain",
+            "value": {
+              "stringValue": "B"
+            }
+          },
+          {
+            "key": "clockweave.clock.epoch",
+            "value": {
+              "stringValue": "driver"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "clockweave.loopback"
+          },
+          "spans": [
+            {
+              "traceId": "00000000000000000000000000000001",
+              "spanId": "0000000000000003",
+              "name": "serve",
+              "kind": 2,
+              "startTimeUnixNano": "1800000000000000021",
+              "endTimeUnixNano": "1800000000000000029",
+              "parentSpanId": "0000000000000002"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "clockweave.clock.domain",
+            "value": {
+              "stringValue": "B"
+            }
+          },
+          {
+            "key": "clockweave.clock.epoch",
+            "value": {
+              "stringValue": "driver"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "clockweave.loopback"
+          },
+          "spans": [
+            {
+              "traceId": "00000000000000000000000000000002",
+              "spanId": "0000000000000004",
+              "name": "call",
+              "kind": 3,
+              "startTimeUnixNano": "1800000000000000101",
+              "endTimeUnixNano": "1800000000000000111"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "clockweave.clock.domain",
+            "value": {
+              "stringValue": "C"
+            }
+          },
+          {
+            "key": "clockweave.clock.epoch",
+            "value": {
+              "stringValue": "driver"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "clockweave.loopback"
+          },
+          "spans": [
+            {
+              "traceId": "00000000000000000000000000000002",
+              "spanId": "0000000000000005",
+              "name": "serve",
+              "kind": 2,
+              "startTimeUnixNano": "1800000000000000131",
+              "endTimeUnixNano": "1800000000000000139",
+              "parentSpanId": "0000000000000004"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "clockweave.clock.domain",
+            "value": {
+              "stringValue": "A"
+            }
+          },
+          {
+            "key": "clockweave.clock.epoch",
+            "value": {
+              "stringValue": "driver"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "clockweave.loopback"
+          },
+          "spans": [
+            {
+              "traceId": "00000000000000000000000000000003",
+              "spanId": "0000000000000006",
+              "name": "call",
+              "kind": 3,
+              "startTimeUnixNano": "1800000000000000201",
+              "endTimeUnixNano": "1800000000000000211"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "clockweave.clock.domain",
+            "value": {
+              "stringValue": "C"
+            }
+          },
+          {
+            "key": "clockweave.clock.epoch",
+            "value": {
+              "stringValue": "driver"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "clockweave.loopback"
+          },
+          "spans": [
+            {
+              "traceId": "00000000000000000000000000000003",
+              "spanId": "0000000000000007",
+              "name": "serve",
+              "kind": 2,
+              "startTimeUnixNano": "1800000000000000241",
+              "endTimeUnixNano": "1800000000000000249",
+              "parentSpanId": "0000000000000006"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

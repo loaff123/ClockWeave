@@ -1,0 +1,89 @@
+{
+  "workflow": "application-owned Python OpenTelemetry loopback HTTP",
+  "sdk_version": "1.45.1",
+  "protobuf_version": "7.36.2",
+  "physical_host_count": 1,
+  "system_clock_modified": false,
+  "per_capture_manual_annotations": 0,
+  "lifecycle": [
+    {
+      "event": "started",
+      "domain": "C",
+      "epoch": "b077bd45fda347379774408b4bd2f2bb",
+      "pid": 7,
+      "port": 40987,
+      "observed_time_ns": "1791452413215965761"
+    },
+    {
+      "event": "started",
+      "domain": "B",
+      "epoch": "3fac895099154939845e704510adc05c",
+      "pid": 9,
+      "port": 34891,
+      "observed_time_ns": "1791452413385483468"
+    },
+    {
+      "event": "stopped",
+      "domain": "C",
+      "epoch": "b077bd45fda347379774408b4bd2f2bb",
+      "pid": 7,
+      "observed_time_ns": "1791452413492643026"
+    },
+    {
+      "event": "started",
+      "domain": "C",
+      "epoch": "190ca34710624fabab4ac55b3b5c79d2",
+      "pid": 16,
+      "port": 39705,
+      "observed_time_ns": "1791452413862108239"
+    },
+    {
+      "event": "stopped",
+      "domain": "C",
+      "epoch": "190ca34710624fabab4ac55b3b5c79d2",
+      "pid": 16,
+      "observed_time_ns": "1791452413890448322"
+    },
+    {
+      "event": "stopped",
+      "domain": "B",
+      "epoch": "3fac895099154939845e704510adc05c",
+      "pid": 9,
+      "observed_time_ns": "1791452413960766849"
+    }
+  ],
+  "clocks": [
+    {
+      "domain": "A",
+      "epoch": "driver",
+      "injected_offset_ns": "0"
+    },
+    {
+      "domain": "C",
+      "epoch": "b077bd45fda347379774408b4bd2f2bb",
+      "injected_offset_ns": "-10000000"
+    },
+    {
+      "domain": "B",
+      "epoch": "3fac895099154939845e704510adc05c",
+      "injected_offset_ns": "20000000"
+    },
+    {
+      "domain": "C",
+      "epoch": "190ca34710624fabab4ac55b3b5c79d2",
+      "injected_offset_ns": "400000000"
+    }
+  ],
+  "conversion": "Official OTLP protobuf encoder -> protobuf JSON dictionary with hex IDs and integer enums; comparison view floors both endpoints to integer microseconds.",
+  "claim_limit": "Injected instrumentation offsets, actual separate processes/restart and loopback HTTP; not physical clock measurement.",
+  "sha256": {
+    "process-b077bd45fda347379774408b4bd2f2bb.pb": "a078c80268e54c0c3932a4590aa84a7e274730378d2eb76ceedd4eeebd8ba47a",
+    "original.otlp.json": "90bb22f052f44c5f11cfa43826dfb97f44fbf0d080e06d2c1ba1bbe991983a39",
+    "process-3fac895099154939845e704510adc05c.pb": "53274d72b70f7fd08dd283b6c5119b384378929d59bf8db449d79f9cabd09565",
+    "process-190ca34710624fabab4ac55b3b5c79d2.pb": "226789daa8ab3128173c73be1ceed3900292dfc5751dbd31f1655915ae103688",
+    "driver.pb": "34132da132bdabfa3178b523241703fd9204c8c415f2919fa7fdd23b5c093e47",
+    "comparison.jaeger.json": "32ca979e0574ac226ea0146c7669209a7e601142d357d326d538b9f2c9b0bf1f",
+    "original.pb": "77be23edaae854180765f69a765bd464cbd48128c6438899be5a3477a0a8302d",
+    "original.otlp.jsonl": "8e1e3b2be8c236a7dcaee70db9f853af03ccab7f0dacfaafe5c708a082a89599"
+  }
+}

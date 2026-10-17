@@ -1,0 +1,652 @@
+{
+  "date": "2026-10-08",
+  "captures": [
+    {
+      "capture": 1,
+      "qualified_pairs": 7,
+      "start_relations": 7,
+      "end_relations": 6,
+      "domains_epochs": 4,
+      "known_injections_satisfy_all": true,
+      "original_status": "compatible",
+      "merged_epoch_cycle_ns": "-408860975",
+      "naive_header_cycle_ns": "-39173658",
+      "single_span_corruption_cycle_ns": "-196771549",
+      "all_corruption_local_bands_nonempty": true,
+      "shared_jaeger_raw_status": "compatible",
+      "original_sha256": "90bb22f052f44c5f11cfa43826dfb97f44fbf0d080e06d2c1ba1bbe991983a39"
+    },
+    {
+      "capture": 2,
+      "qualified_pairs": 7,
+      "start_relations": 7,
+      "end_relations": 6,
+      "domains_epochs": 4,
+      "known_injections_satisfy_all": true,
+      "original_status": "compatible",
+      "merged_epoch_cycle_ns": "-408830216",
+      "naive_header_cycle_ns": "-39176994",
+      "single_span_corruption_cycle_ns": "-198754096",
+      "all_corruption_local_bands_nonempty": true,
+      "shared_jaeger_raw_status": "compatible",
+      "original_sha256": "f0a950495525a38ad2e08e6b372d6afa9fcfdebd000174cf7f9003c258f7dd01"
+    }
+  ],
+  "oracle": {
+    "cases": 1000,
+    "feasible": 668,
+    "infeasible": 332,
+    "floyd_endpoints": 5360,
+    "lp_endpoints": 3743,
+    "exhaustive_cases": 20,
+    "seed": 20261008,
+    "all_assertions_passed": true,
+    "oracle": "independent integer Floyd-Warshall; SciPy/HiGHS feasibility and optimization; bounded exhaustive enumeration"
+  },
+  "resource_measurements": [
+    {
+      "spans": 1000,
+      "domains": 32,
+      "dense": true,
+      "graph_edges": 992,
+      "raw_constraints": 1000,
+      "seconds": {
+        "load": 0.013590438000392169,
+        "inspect": 0.023943731001054402,
+        "analyze": 0.08433230399532476,
+        "verify": 0.11584376400423935,
+        "json": 0.06014397100079805,
+        "html": 0.14157325500127627
+      },
+      "total_seconds": 0.439427463003085,
+      "peak_rss_mib": 41.54296875,
+      "input_bytes": 218263,
+      "json_bytes": 2473277,
+      "html_bytes": 3383708,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 1000,
+      "domains": 32,
+      "dense": false,
+      "graph_edges": 64,
+      "raw_constraints": 1000,
+      "seconds": {
+        "load": 0.018808668995916378,
+        "inspect": 0.025992975999542978,
+        "analyze": 0.054966461000731215,
+        "verify": 0.15891695600294042,
+        "json": 0.06381202099873917,
+        "html": 0.13920173000224167
+      },
+      "total_seconds": 0.46169881300011184,
+      "peak_rss_mib": 47.4609375,
+      "input_bytes": 218263,
+      "json_bytes": 2482651,
+      "html_bytes": 3394856,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 1000,
+      "domains": 64,
+      "dense": true,
+      "graph_edges": 1000,
+      "raw_constraints": 1000,
+      "seconds": {
+        "load": 0.01554030500119552,
+        "inspect": 0.02665773300395813,
+        "analyze": 0.1771976310046739,
+        "verify": 0.1741021979978541,
+        "json": 0.06757549400208518,
+        "html": 0.1488054099972942
+      },
+      "total_seconds": 0.609878771007061,
+      "peak_rss_mib": 49.66015625,
+      "input_bytes": 226007,
+      "json_bytes": 2668827,
+      "html_bytes": 3681546,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 1000,
+      "domains": 64,
+      "dense": false,
+      "graph_edges": 128,
+      "raw_constraints": 1000,
+      "seconds": {
+        "load": 0.012676234000537079,
+        "inspect": 0.02718037999875378,
+        "analyze": 0.1281256040019798,
+        "verify": 0.16954210399853764,
+        "json": 0.06487672199727967,
+        "html": 0.16272997099440545
+      },
+      "total_seconds": 0.5651310149914934,
+      "peak_rss_mib": 50.00390625,
+      "input_bytes": 226007,
+      "json_bytes": 2708068,
+      "html_bytes": 3730681,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 1000,
+      "domains": 8,
+      "dense": true,
+      "graph_edges": 56,
+      "raw_constraints": 1000,
+      "seconds": {
+        "load": 0.013283255997521337,
+        "inspect": 0.026901878998614848,
+        "analyze": 0.043237940000835806,
+        "verify": 0.06918946599762421,
+        "json": 0.05871313600073336,
+        "html": 0.13011843099957332
+      },
+      "total_seconds": 0.3414441079949029,
+      "peak_rss_mib": 43.4921875,
+      "input_bytes": 212455,
+      "json_bytes": 2404226,
+      "html_bytes": 3279755,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 1000,
+      "domains": 8,
+      "dense": false,
+      "graph_edges": 16,
+      "raw_constraints": 1000,
+      "seconds": {
+        "load": 0.012273786000150722,
+        "inspect": 0.027982309002254624,
+        "analyze": 0.03636655500304187,
+        "verify": 0.071782314000302,
+        "json": 0.09383017000072869,
+        "html": 0.1829237159981858
+      },
+      "total_seconds": 0.4251588500046637,
+      "peak_rss_mib": 43.48046875,
+      "input_bytes": 212455,
+      "json_bytes": 2404321,
+      "html_bytes": 3279642,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 10000,
+      "domains": 32,
+      "dense": true,
+      "graph_edges": 992,
+      "raw_constraints": 10000,
+      "seconds": {
+        "load": 0.15379396700154757,
+        "inspect": 0.3577428240023437,
+        "analyze": 0.6558488959999522,
+        "verify": 1.2668869440021808,
+        "json": 0.5786810680001508,
+        "html": 1.4946970240052906
+      },
+      "total_seconds": 4.507650723011466,
+      "peak_rss_mib": 274.390625,
+      "input_bytes": 2112763,
+      "json_bytes": 24076293,
+      "html_bytes": 32824120,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 10000,
+      "domains": 32,
+      "dense": false,
+      "graph_edges": 64,
+      "raw_constraints": 10000,
+      "seconds": {
+        "load": 0.14017948199762031,
+        "inspect": 0.38693007699475856,
+        "analyze": 0.724604041002749,
+        "verify": 1.2597360290019424,
+        "json": 0.5981125899998005,
+        "html": 1.376874196001154
+      },
+      "total_seconds": 4.486436414998025,
+      "peak_rss_mib": 274.59375,
+      "input_bytes": 2112763,
+      "json_bytes": 24077580,
+      "html_bytes": 32819074,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 10000,
+      "domains": 64,
+      "dense": true,
+      "graph_edges": 4032,
+      "raw_constraints": 10000,
+      "seconds": {
+        "load": 0.1798700369981816,
+        "inspect": 0.3461936639941996,
+        "analyze": 1.115769513999112,
+        "verify": 1.8240018069991493,
+        "json": 0.6184868470008951,
+        "html": 1.5981886290028342
+      },
+      "total_seconds": 5.682510497994372,
+      "peak_rss_mib": 277.328125,
+      "input_bytes": 2120507,
+      "json_bytes": 24268720,
+      "html_bytes": 33122925,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 10000,
+      "domains": 64,
+      "dense": true,
+      "attribute_bytes_per_span": 512,
+      "graph_edges": 4032,
+      "raw_constraints": 10000,
+      "seconds": {
+        "load": 0.19170274600037374,
+        "inspect": 0.4490449700024328,
+        "analyze": 1.2522173470060807,
+        "verify": 2.056373626997811,
+        "json": 0.6826196120018722,
+        "html": 1.515139816001465
+      },
+      "total_seconds": 6.147098118010035,
+      "peak_rss_mib": 318.8203125,
+      "input_bytes": 8020507,
+      "json_bytes": 29798720,
+      "html_bytes": 38772925,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 10000,
+      "domains": 64,
+      "dense": false,
+      "graph_edges": 128,
+      "raw_constraints": 10000,
+      "seconds": {
+        "load": 0.19598837700323202,
+        "inspect": 0.40726892000384396,
+        "analyze": 0.8959841890027747,
+        "verify": 1.905074799004069,
+        "json": 0.6100629279972054,
+        "html": 1.3795454959981726
+      },
+      "total_seconds": 5.393924709009298,
+      "peak_rss_mib": 277.18359375,
+      "input_bytes": 2120507,
+      "json_bytes": 24301587,
+      "html_bytes": 33156079,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 10000,
+      "domains": 8,
+      "dense": true,
+      "graph_edges": 56,
+      "raw_constraints": 10000,
+      "seconds": {
+        "load": 0.18917577200045343,
+        "inspect": 0.6297085699989111,
+        "analyze": 0.5223361440002918,
+        "verify": 0.8867002979968674,
+        "json": 0.5591580429972964,
+        "html": 1.2852033050003229
+      },
+      "total_seconds": 4.072282131994143,
+      "peak_rss_mib": 269.38671875,
+      "input_bytes": 2106955,
+      "json_bytes": 23977603,
+      "html_bytes": 32673001,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 10000,
+      "domains": 8,
+      "dense": false,
+      "graph_edges": 16,
+      "raw_constraints": 10000,
+      "seconds": {
+        "load": 0.12882261099730385,
+        "inspect": 0.3193477270033327,
+        "analyze": 0.5001983100009966,
+        "verify": 0.8829006029991433,
+        "json": 0.7284343440041994,
+        "html": 1.949624932000006
+      },
+      "total_seconds": 4.509328527004982,
+      "peak_rss_mib": 267.95703125,
+      "input_bytes": 2106955,
+      "json_bytes": 23974892,
+      "html_bytes": 32667276,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 50000,
+      "domains": 32,
+      "dense": true,
+      "graph_edges": 992,
+      "raw_constraints": 50000,
+      "seconds": {
+        "load": 0.7605851450061891,
+        "inspect": 2.9869848640009877,
+        "analyze": 4.746758822002448,
+        "verify": 7.709233508001489,
+        "json": 3.15382541299914,
+        "html": 7.184648235001077
+      },
+      "total_seconds": 26.54203598701133,
+      "peak_rss_mib": 1260.09375,
+      "input_bytes": 10532763,
+      "json_bytes": 120173488,
+      "html_bytes": 163754485,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 50000,
+      "domains": 32,
+      "dense": false,
+      "graph_edges": 64,
+      "raw_constraints": 50000,
+      "seconds": {
+        "load": 0.7642791500038584,
+        "inspect": 3.063547723002557,
+        "analyze": 4.588951593999809,
+        "verify": 6.806250251000165,
+        "json": 3.21365868900466,
+        "html": 7.115464087000873
+      },
+      "total_seconds": 25.552151494011923,
+      "peak_rss_mib": 1257.91015625,
+      "input_bytes": 10532763,
+      "json_bytes": 120138460,
+      "html_bytes": 163676829,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 50000,
+      "domains": 64,
+      "dense": true,
+      "graph_edges": 4032,
+      "raw_constraints": 50000,
+      "seconds": {
+        "load": 0.7553360780002549,
+        "inspect": 3.319871202002105,
+        "analyze": 6.828553726998507,
+        "verify": 10.351577428999008,
+        "json": 3.404276972003572,
+        "html": 7.779627641000843
+      },
+      "total_seconds": 32.43924304900429,
+      "peak_rss_mib": 1297.73828125,
+      "input_bytes": 10540507,
+      "json_bytes": 120359483,
+      "html_bytes": 164069414,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 50000,
+      "domains": 64,
+      "dense": false,
+      "graph_edges": 128,
+      "raw_constraints": 50000,
+      "seconds": {
+        "load": 0.7553964050021023,
+        "inspect": 2.976536793001287,
+        "analyze": 6.405446961005509,
+        "verify": 9.54448706999392,
+        "json": 3.4306095729989465,
+        "html": 7.625635862001218
+      },
+      "total_seconds": 30.738112664002983,
+      "peak_rss_mib": 1292.7421875,
+      "input_bytes": 10540507,
+      "json_bytes": 120345070,
+      "html_bytes": 164008012,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 50000,
+      "domains": 8,
+      "dense": true,
+      "graph_edges": 56,
+      "raw_constraints": 50000,
+      "seconds": {
+        "load": 0.8005209100010688,
+        "inspect": 2.3949489790029475,
+        "analyze": 3.33031375399878,
+        "verify": 4.5230854300025385,
+        "json": 3.1960401039978024,
+        "html": 7.820542291003221
+      },
+      "total_seconds": 22.06545146800636,
+      "peak_rss_mib": 1235.10546875,
+      "input_bytes": 10526955,
+      "json_bytes": 119952610,
+      "html_bytes": 163403010,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 50000,
+      "domains": 8,
+      "dense": false,
+      "graph_edges": 16,
+      "raw_constraints": 50000,
+      "seconds": {
+        "load": 0.7320311110015609,
+        "inspect": 2.328376883000601,
+        "analyze": 3.5037656599961338,
+        "verify": 5.3959848869999405,
+        "json": 4.434896163002122,
+        "html": 8.772469529998489
+      },
+      "total_seconds": 25.167524233998847,
+      "peak_rss_mib": 1234.6875,
+      "input_bytes": 10526955,
+      "json_bytes": 119937397,
+      "html_bytes": 163372281,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 10000,
+      "domains": 64,
+      "dense": true,
+      "attribute_bytes_per_span": 548,
+      "graph_edges": 4032,
+      "raw_constraints": 10000,
+      "seconds": {
+        "load": 0.30244315000163624,
+        "inspect": 0.4650126630003797,
+        "analyze": 3.1576326909998897,
+        "verify": 3.0832207950006705,
+        "json": 0.9375752750056563,
+        "html": 1.9855034240026725
+      },
+      "total_seconds": 9.931387998010905,
+      "peak_rss_mib": 320.9765625,
+      "input_bytes": 8380507,
+      "json_bytes": 30158720,
+      "html_bytes": 39132925,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    },
+    {
+      "spans": 10000,
+      "domains": 64,
+      "dense": true,
+      "attribute_bytes_per_span": 548,
+      "graph_edges": 4032,
+      "raw_constraints": 10000,
+      "seconds": {
+        "load": 0.2877541800044128,
+        "inspect": 0.3966874719990301,
+        "analyze": 1.1098983870033408,
+        "verify": 1.842947211000137,
+        "json": 0.62033885299752,
+        "html": 1.3940082850022009
+      },
+      "total_seconds": 5.6516343880066415,
+      "peak_rss_mib": 320.59765625,
+      "input_bytes": 8380507,
+      "json_bytes": 30158720,
+      "html_bytes": 39132925,
+      "replay_valid": true,
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+        "machine": "x86_64"
+      },
+      "limits": "Measured generated workload only; not a hostile-input or OS resource guarantee."
+    }
+  ],
+  "platform_checks": {
+    "executed": "Linux x86_64 Python 3.12.14",
+    "configured_not_executed": [
+      "macOS",
+      "Windows",
+      "Python 3.10",
+      "Python 3.13"
+    ]
+  },
+  "visual_check": "Headless Chromium could not initialize its local socket in the execution environment; no browser screenshot pass is claimed.",
+  "post_review_source_tests": {
+    "passed": 168,
+    "skipped": 0,
+    "includes": "actual repeated loopback capture and official Jaeger runtime"
+  },
+  "independent_review": {
+    "original_findings": 6,
+    "author_regression_repairs": "passed; original red cases retained privately",
+    "followup_independent_whole_tree_review": false,
+    "focused_repair_confirmation": true,
+    "focused_targeted_tests_passed": 35,
+    "focused_adjacent_tests_passed": 89,
+    "full_168_test_runs": "author evidence; separate from reviewer checks"
+  },
+  "ci_scope": {
+    "ordinary_jaeger": "skipped unless explicitly enabled with binary and capture paths",
+    "ordinary_scipy_oracle": "not run; SciPy not installed by the matrix",
+    "pytest_skip_reasons": "-rs",
+    "checkout_persist_credentials": false,
+    "action_commits": {
+      "actions/checkout": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "actions/setup-python": "5fda3b95a4ea91299a34e894583c3862153e4b97"
+    }
+  }
+}

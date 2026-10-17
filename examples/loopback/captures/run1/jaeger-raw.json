@@ -1,0 +1,926 @@
+{
+  "data": [
+    {
+      "traceID": "584cc0e555572951d59fb5268998fcff",
+      "spans": [
+        {
+          "traceID": "584cc0e555572951d59fb5268998fcff",
+          "spanID": "c0e91bfd7a3dcda0",
+          "operationName": "fully-consumed-rpc",
+          "references": [],
+          "startTime": 1791452413412829,
+          "duration": 3367,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "clockweave.loopback"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "584cc0e555572951d59fb5268998fcff",
+          "spanID": "5b72724298af7985",
+          "operationName": "handler-before-response",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "584cc0e555572951d59fb5268998fcff",
+              "spanID": "c0e91bfd7a3dcda0"
+            }
+          ],
+          "startTime": 1791452413403702,
+          "duration": 2141,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "clockweave.loopback"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": [
+            "clock skew adjustment disabled; not applying calculated delta of 9.74ms"
+          ]
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "clockweave-loopback-A",
+          "tags": [
+            {
+              "key": "clockweave.clock.domain",
+              "type": "string",
+              "value": "A"
+            },
+            {
+              "key": "clockweave.clock.epoch",
+              "type": "string",
+              "value": "driver"
+            },
+            {
+              "key": "clockweave.timestamp.state",
+              "type": "string",
+              "value": "raw"
+            },
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "A-driver"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "clockweave-loopback-C",
+          "tags": [
+            {
+              "key": "clockweave.clock.domain",
+              "type": "string",
+              "value": "C"
+            },
+            {
+              "key": "clockweave.clock.epoch",
+              "type": "string",
+              "value": "b077bd45fda347379774408b4bd2f2bb"
+            },
+            {
+              "key": "clockweave.timestamp.state",
+              "type": "string",
+              "value": "raw"
+            },
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "C-b077bd45fda347379774408b4bd2f2bb"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "605d4fc00ec14f34cad080cc8bdbfded",
+      "spans": [
+        {
+          "traceID": "605d4fc00ec14f34cad080cc8bdbfded",
+          "spanID": "dbd51197bfe22b18",
+          "operationName": "fully-consumed-rpc",
+          "references": [],
+          "startTime": 1791452413862327,
+          "duration": 15517,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "clockweave.loopback"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "605d4fc00ec14f34cad080cc8bdbfded",
+          "spanID": "80ef73f279203a14",
+          "operationName": "handler-before-response",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "605d4fc00ec14f34cad080cc8bdbfded",
+              "spanID": "5154f9897036e9bf"
+            }
+          ],
+          "startTime": 1791452414274494,
+          "duration": 2193,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "clockweave.loopback"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": [
+            "clock skew adjustment disabled; not applying calculated delta of -382.0665ms"
+          ]
+        },
+        {
+          "traceID": "605d4fc00ec14f34cad080cc8bdbfded",
+          "spanID": "5154f9897036e9bf",
+          "operationName": "fully-consumed-rpc",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "605d4fc00ec14f34cad080cc8bdbfded",
+              "spanID": "39891ec92ad1311e"
+            }
+          ],
+          "startTime": 1791452413889581,
+          "duration": 7886,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "clockweave.loopback"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            }
+          ],
+          "logs": [],
+          "processID": "p3",
+          "warnings": null
+        },
+        {
+          "traceID": "605d4fc00ec14f34cad080cc8bdbfded",
+          "spanID": "39891ec92ad1311e",
+          "operationName": "handler-before-response",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "605d4fc00ec14f34cad080cc8bdbfded",
+              "spanID": "dbd51197bfe22b18"
+            }
+          ],
+          "startTime": 1791452413887122,
+          "duration": 10380,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "clockweave.loopback"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            }
+          ],
+          "logs": [],
+          "processID": "p3",
+          "warnings": [
+            "clock skew adjustment disabled; not applying calculated delta of -22.2265ms"
+          ]
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "clockweave-loopback-A",
+          "tags": [
+            {
+              "key": "clockweave.clock.domain",
+              "type": "string",
+              "value": "A"
+            },
+            {
+              "key": "clockweave.clock.epoch",
+              "type": "string",
+              "value": "driver"
+            },
+            {
+              "key": "clockweave.timestamp.state",
+              "type": "string",
+              "value": "raw"
+            },
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "A-driver"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "clockweave-loopback-C",
+          "tags": [
+            {
+              "key": "clockweave.clock.domain",
+              "type": "string",
+              "value": "C"
+            },
+            {
+              "key": "clockweave.clock.epoch",
+              "type": "string",
+              "value": "190ca34710624fabab4ac55b3b5c79d2"
+            },
+            {
+              "key": "clockweave.timestamp.state",
+              "type": "string",
+              "value": "raw"
+            },
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "C-190ca34710624fabab4ac55b3b5c79d2"
+            }
+          ]
+        },
+        "p3": {
+          "serviceName": "clockweave-loopback-B",
+          "tags": [
+            {
+              "key": "clockweave.clock.domain",
+              "type": "string",
+              "value": "B"
+            },
+            {
+              "key": "clockweave.clock.epoch",
+              "type": "string",
+              "value": "3fac895099154939845e704510adc05c"
+            },
+            {
+              "key": "clockweave.timestamp.state",
+              "type": "string",
+              "value": "raw"
+            },
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "B-3fac895099154939845e704510adc05c"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "87af2a01f9e77e03db1fb3a96750d0c6",
+      "spans": [
+        {
+          "traceID": "87af2a01f9e77e03db1fb3a96750d0c6",
+          "spanID": "18a251770440d591",
+          "operationName": "fully-consumed-rpc",
+          "references": [],
+          "startTime": 1791452413385701,
+          "duration": 27070,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "clockweave.loopback"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "87af2a01f9e77e03db1fb3a96750d0c6",
+          "spanID": "371b08e7ec3188a3",
+          "operationName": "fully-consumed-rpc",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "87af2a01f9e77e03db1fb3a96750d0c6",
+              "spanID": "8970630dd9e54630"
+            }
+          ],
+          "startTime": 1791452413415651,
+          "duration": 16627,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "clockweave.loopback"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "87af2a01f9e77e03db1fb3a96750d0c6",
+          "spanID": "8970630dd9e54630",
+          "operationName": "handler-before-response",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "87af2a01f9e77e03db1fb3a96750d0c6",
+              "spanID": "18a251770440d591"
+            }
+          ],
+          "startTime": 1791452413413430,
+          "duration": 18907,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "clockweave.loopback"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": [
+            "clock skew adjustment disabled; not applying calculated delta of -23.6475ms"
+          ]
+        },
+        {
+          "traceID": "87af2a01f9e77e03db1fb3a96750d0c6",
+          "spanID": "839d2d0710626a60",
+          "operationName": "handler-before-response",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "87af2a01f9e77e03db1fb3a96750d0c6",
+              "spanID": "371b08e7ec3188a3"
+            }
+          ],
+          "startTime": 1791452413398764,
+          "duration": 2172,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "clockweave.loopback"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            }
+          ],
+          "logs": [],
+          "processID": "p3",
+          "warnings": [
+            "clock skew adjustment disabled; not applying calculated delta of 24.1145ms"
+          ]
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "clockweave-loopback-A",
+          "tags": [
+            {
+              "key": "clockweave.clock.domain",
+              "type": "string",
+              "value": "A"
+            },
+            {
+              "key": "clockweave.clock.epoch",
+              "type": "string",
+              "value": "driver"
+            },
+            {
+              "key": "clockweave.timestamp.state",
+              "type": "string",
+              "value": "raw"
+            },
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "A-driver"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "clockweave-loopback-B",
+          "tags": [
+            {
+              "key": "clockweave.clock.domain",
+              "type": "string",
+              "value": "B"
+            },
+            {
+              "key": "clockweave.clock.epoch",
+              "type": "string",
+              "value": "3fac895099154939845e704510adc05c"
+            },
+            {
+              "key": "clockweave.timestamp.state",
+              "type": "string",
+              "value": "raw"
+            },
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "B-3fac895099154939845e704510adc05c"
+            }
+          ]
+        },
+        "p3": {
+          "serviceName": "clockweave-loopback-C",
+          "tags": [
+            {
+              "key": "clockweave.clock.domain",
+              "type": "string",
+              "value": "C"
+            },
+            {
+              "key": "clockweave.clock.epoch",
+              "type": "string",
+              "value": "b077bd45fda347379774408b4bd2f2bb"
+            },
+            {
+              "key": "clockweave.timestamp.state",
+              "type": "string",
+              "value": "raw"
+            },
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "C-b077bd45fda347379774408b4bd2f2bb"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "a5e551009722cf115e27a8451eb2a94e",
+      "spans": [
+        {
+          "traceID": "a5e551009722cf115e27a8451eb2a94e",
+          "spanID": "a34c739a7a20c33e",
+          "operationName": "enqueue-background",
+          "references": [],
+          "startTime": 1791452413459525,
+          "duration": 101,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "clockweave.loopback"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "producer"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a5e551009722cf115e27a8451eb2a94e",
+          "spanID": "b0d160b2be93136d",
+          "operationName": "background-outlives-parent",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a5e551009722cf115e27a8451eb2a94e",
+              "spanID": "a34c739a7a20c33e"
+            }
+          ],
+          "startTime": 1791452413451410,
+          "duration": 20172,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "clockweave.loopback"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "consumer"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": [
+            "clock skew adjustment disabled; not applying calculated delta of 8.115ms"
+          ]
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "clockweave-loopback-A",
+          "tags": [
+            {
+              "key": "clockweave.clock.domain",
+              "type": "string",
+              "value": "A"
+            },
+            {
+              "key": "clockweave.clock.epoch",
+              "type": "string",
+              "value": "driver"
+            },
+            {
+              "key": "clockweave.timestamp.state",
+              "type": "string",
+              "value": "raw"
+            },
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "A-driver"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "clockweave-loopback-C",
+          "tags": [
+            {
+              "key": "clockweave.clock.domain",
+              "type": "string",
+              "value": "C"
+            },
+            {
+              "key": "clockweave.clock.epoch",
+              "type": "string",
+              "value": "b077bd45fda347379774408b4bd2f2bb"
+            },
+            {
+              "key": "clockweave.timestamp.state",
+              "type": "string",
+              "value": "raw"
+            },
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "C-b077bd45fda347379774408b4bd2f2bb"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "f1de29a7578daf1818b3edd980e6ec04",
+      "spans": [
+        {
+          "traceID": "f1de29a7578daf1818b3edd980e6ec04",
+          "spanID": "2cbc579d74196a00",
+          "operationName": "fully-consumed-rpc",
+          "references": [],
+          "startTime": 1791452413877884,
+          "duration": 4452,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "clockweave.loopback"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "f1de29a7578daf1818b3edd980e6ec04",
+          "spanID": "0c2caa67f51e190c",
+          "operationName": "handler-before-response",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "f1de29a7578daf1818b3edd980e6ec04",
+              "spanID": "2cbc579d74196a00"
+            }
+          ],
+          "startTime": 1791452414279558,
+          "duration": 2512,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "clockweave.loopback"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": [
+            "clock skew adjustment disabled; not applying calculated delta of -400.704ms"
+          ]
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "clockweave-loopback-A",
+          "tags": [
+            {
+              "key": "clockweave.clock.domain",
+              "type": "string",
+              "value": "A"
+            },
+            {
+              "key": "clockweave.clock.epoch",
+              "type": "string",
+              "value": "driver"
+            },
+            {
+              "key": "clockweave.timestamp.state",
+              "type": "string",
+              "value": "raw"
+            },
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "A-driver"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "clockweave-loopback-C",
+          "tags": [
+            {
+              "key": "clockweave.clock.domain",
+              "type": "string",
+              "value": "C"
+            },
+            {
+              "key": "clockweave.clock.epoch",
+              "type": "string",
+              "value": "190ca34710624fabab4ac55b3b5c79d2"
+            },
+            {
+              "key": "clockweave.timestamp.state",
+              "type": "string",
+              "value": "raw"
+            },
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "C-190ca34710624fabab4ac55b3b5c79d2"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "f68979065afe909466a78f5529a2f112",
+      "spans": [
+        {
+          "traceID": "f68979065afe909466a78f5529a2f112",
+          "spanID": "090a67c101f49bf7",
+          "operationName": "client-until-headers",
+          "references": [],
+          "startTime": 1791452413416236,
+          "duration": 3097,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "clockweave.loopback"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "f68979065afe909466a78f5529a2f112",
+          "spanID": "1a73390f6122fabd",
+          "operationName": "server-through-response-body",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "f68979065afe909466a78f5529a2f112",
+              "spanID": "090a67c101f49bf7"
+            }
+          ],
+          "startTime": 1791452413409111,
+          "duration": 40268,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "clockweave.loopback"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": [
+            "clock skew adjustment disabled; not applying calculated delta of 7.125ms"
+          ]
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "clockweave-loopback-A",
+          "tags": [
+            {
+              "key": "clockweave.clock.domain",
+              "type": "string",
+              "value": "A"
+            },
+            {
+              "key": "clockweave.clock.epoch",
+              "type": "string",
+              "value": "driver"
+            },
+            {
+              "key": "clockweave.timestamp.state",
+              "type": "string",
+              "value": "raw"
+            },
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "A-driver"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "clockweave-loopback-C",
+          "tags": [
+            {
+              "key": "clockweave.clock.domain",
+              "type": "string",
+              "value": "C"
+            },
+            {
+              "key": "clockweave.clock.epoch",
+              "type": "string",
+              "value": "b077bd45fda347379774408b4bd2f2bb"
+            },
+            {
+              "key": "clockweave.timestamp.state",
+              "type": "string",
+              "value": "raw"
+            },
+            {
+              "key": "service.instance.id",
+              "type": "string",
+              "value": "C-b077bd45fda347379774408b4bd2f2bb"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    }
+  ]
+}

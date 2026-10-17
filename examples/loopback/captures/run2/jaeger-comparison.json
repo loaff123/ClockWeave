@@ -1,0 +1,241 @@
+{
+  "upstream": "Jaeger official runtime",
+  "upstream_version": "2.22.0",
+  "source": "https://github.com/jaegertracing/jaeger/releases/tag/v2.22.0",
+  "binary_sha256": "fa574f53e2f739301f301f66e5608c84d0b9a90cdd08e4f6cba8809d171854e1",
+  "original_otlp_sha256": "f0a950495525a38ad2e08e6b372d6afa9fcfdebd000174cf7f9003c258f7dd01",
+  "precision": "Both endpoints floored to microseconds before ingestion; raw queried Jaeger JSON is the exact shared analysis input.",
+  "raw_endpoint_roundtrip_exact": true,
+  "span_count": 16,
+  "changed_span_count": 9,
+  "child_telemetry_exporters": "none (benchmark child only; no system settings changed)",
+  "commands": [
+    [
+      "jaeger",
+      "--config",
+      "raw.yaml"
+    ],
+    [
+      "jaeger",
+      "--config",
+      "adjusted.yaml"
+    ]
+  ],
+  "ingest_responses": [
+    "{\"partialSuccess\":{}}",
+    "{\"partialSuccess\":{}}"
+  ],
+  "differences": [
+    {
+      "trace_id": "076f0e1a91fa28439106d5059bb1ee5e",
+      "span_id": "30afce6a96182fe4",
+      "name": "handler-before-response",
+      "raw_start_us": "1791452414594148",
+      "adjusted_start_us": "1791452414570529",
+      "delta_us": "-23619",
+      "duration_us": "14125",
+      "raw_warnings": [
+        "clock skew adjustment disabled; not applying calculated delta of -23.6185ms"
+      ],
+      "adjusted_warnings": [
+        "This span's timestamps were adjusted by -23.6185ms"
+      ]
+    },
+    {
+      "trace_id": "076f0e1a91fa28439106d5059bb1ee5e",
+      "span_id": "374a355532798bd5",
+      "name": "fully-consumed-rpc",
+      "raw_start_us": "1791452414596358",
+      "adjusted_start_us": "1791452414571657",
+      "delta_us": "-24701",
+      "duration_us": "11869",
+      "raw_warnings": [],
+      "adjusted_warnings": [
+        "This span's timestamps were adjusted by -24.7005ms"
+      ]
+    },
+    {
+      "trace_id": "076f0e1a91fa28439106d5059bb1ee5e",
+      "span_id": "63f9521686527cdb",
+      "name": "fully-consumed-rpc",
+      "raw_start_us": "1791452414566520",
+      "adjusted_start_us": "1791452414566520",
+      "delta_us": "0",
+      "duration_us": "22144",
+      "raw_warnings": [],
+      "adjusted_warnings": []
+    },
+    {
+      "trace_id": "076f0e1a91fa28439106d5059bb1ee5e",
+      "span_id": "9c935baa1bbcceb6",
+      "name": "handler-before-response",
+      "raw_start_us": "1791452414575578",
+      "adjusted_start_us": "1791452414575578",
+      "delta_us": "0",
+      "duration_us": "2208",
+      "raw_warnings": [
+        "clock skew adjustment disabled; not applying calculated delta of 25.6105ms"
+      ],
+      "adjusted_warnings": []
+    },
+    {
+      "trace_id": "857a36f502d52d6a5fad72ba724f68a2",
+      "span_id": "2f6ba34ba60d70de",
+      "name": "enqueue-background",
+      "raw_start_us": "1791452414633726",
+      "adjusted_start_us": "1791452414633726",
+      "delta_us": "0",
+      "duration_us": "115",
+      "raw_warnings": [],
+      "adjusted_warnings": []
+    },
+    {
+      "trace_id": "857a36f502d52d6a5fad72ba724f68a2",
+      "span_id": "7d38b1368d600ef8",
+      "name": "background-outlives-parent",
+      "raw_start_us": "1791452414624809",
+      "adjusted_start_us": "1791452414633726",
+      "delta_us": "8917",
+      "duration_us": "20147",
+      "raw_warnings": [
+        "clock skew adjustment disabled; not applying calculated delta of 8.917ms"
+      ],
+      "adjusted_warnings": [
+        "This span's timestamps were adjusted by 8.917ms"
+      ]
+    },
+    {
+      "trace_id": "929d680bd28986441f0e6bdf1c972176",
+      "span_id": "048e95932950a83d",
+      "name": "server-through-response-body",
+      "raw_start_us": "1791452414583328",
+      "adjusted_start_us": "1791452414592408",
+      "delta_us": "9080",
+      "duration_us": "40296",
+      "raw_warnings": [
+        "clock skew adjustment disabled; not applying calculated delta of 9.08ms"
+      ],
+      "adjusted_warnings": [
+        "This span's timestamps were adjusted by 9.08ms"
+      ]
+    },
+    {
+      "trace_id": "929d680bd28986441f0e6bdf1c972176",
+      "span_id": "c51d0b3935361c99",
+      "name": "client-until-headers",
+      "raw_start_us": "1791452414592408",
+      "adjusted_start_us": "1791452414592408",
+      "delta_us": "0",
+      "duration_us": "1119",
+      "raw_warnings": [],
+      "adjusted_warnings": []
+    },
+    {
+      "trace_id": "aad54331267b6df79709f1325bf293ed",
+      "span_id": "7c624206954677c5",
+      "name": "handler-before-response",
+      "raw_start_us": "1791452414579682",
+      "adjusted_start_us": "1791452414589366",
+      "delta_us": "9684",
+      "duration_us": "2353",
+      "raw_warnings": [
+        "clock skew adjustment disabled; not applying calculated delta of 9.684ms"
+      ],
+      "adjusted_warnings": [
+        "This span's timestamps were adjusted by 9.684ms"
+      ]
+    },
+    {
+      "trace_id": "aad54331267b6df79709f1325bf293ed",
+      "span_id": "b63876cf994e1edc",
+      "name": "fully-consumed-rpc",
+      "raw_start_us": "1791452414588724",
+      "adjusted_start_us": "1791452414588724",
+      "delta_us": "0",
+      "duration_us": "3637",
+      "raw_warnings": [],
+      "adjusted_warnings": []
+    },
+    {
+      "trace_id": "e1eebeba6eefbc8fb3d40bba820a52cc",
+      "span_id": "50f3572b4b92862a",
+      "name": "handler-before-response",
+      "raw_start_us": "1791452415264077",
+      "adjusted_start_us": "1791452414863278",
+      "delta_us": "-400799",
+      "duration_us": "2147",
+      "raw_warnings": [
+        "clock skew adjustment disabled; not applying calculated delta of -400.799ms"
+      ],
+      "adjusted_warnings": [
+        "This span's timestamps were adjusted by -400.799ms"
+      ]
+    },
+    {
+      "trace_id": "e1eebeba6eefbc8fb3d40bba820a52cc",
+      "span_id": "94db373f7cf3c050",
+      "name": "fully-consumed-rpc",
+      "raw_start_us": "1791452414862230",
+      "adjusted_start_us": "1791452414862230",
+      "delta_us": "0",
+      "duration_us": "4243",
+      "raw_warnings": [],
+      "adjusted_warnings": []
+    },
+    {
+      "trace_id": "fbeed0501749bfca7a9725b28ec84e84",
+      "span_id": "064bc1f51af55fef",
+      "name": "handler-before-response",
+      "raw_start_us": "1791452415258412",
+      "adjusted_start_us": "1791452414856672",
+      "delta_us": "-401740",
+      "duration_us": "2157",
+      "raw_warnings": [
+        "clock skew adjustment disabled; not applying calculated delta of -380.427ms"
+      ],
+      "adjusted_warnings": [
+        "This span's timestamps were adjusted by -401.74ms"
+      ]
+    },
+    {
+      "trace_id": "fbeed0501749bfca7a9725b28ec84e84",
+      "span_id": "4592c07423095474",
+      "name": "fully-consumed-rpc",
+      "raw_start_us": "1791452414877083",
+      "adjusted_start_us": "1791452414855770",
+      "delta_us": "-21313",
+      "duration_us": "3961",
+      "raw_warnings": [],
+      "adjusted_warnings": [
+        "This span's timestamps were adjusted by -21.313ms"
+      ]
+    },
+    {
+      "trace_id": "fbeed0501749bfca7a9725b28ec84e84",
+      "span_id": "50e99c581ef65a78",
+      "name": "handler-before-response",
+      "raw_start_us": "1791452414874913",
+      "adjusted_start_us": "1791452414854656",
+      "delta_us": "-20257",
+      "duration_us": "6188",
+      "raw_warnings": [
+        "clock skew adjustment disabled; not applying calculated delta of -20.2565ms"
+      ],
+      "adjusted_warnings": [
+        "This span's timestamps were adjusted by -20.2565ms"
+      ]
+    },
+    {
+      "trace_id": "fbeed0501749bfca7a9725b28ec84e84",
+      "span_id": "95b77b66fd6c385c",
+      "name": "fully-consumed-rpc",
+      "raw_start_us": "1791452414853308",
+      "adjusted_start_us": "1791452414853308",
+      "delta_us": "0",
+      "duration_us": "8885",
+      "raw_warnings": [],
+      "adjusted_warnings": []
+    }
+  ],
+  "comparison_limit": "Jaeger performs recursive per-trace display correction with warnings. ClockWeave tests a global explicitly qualified constant-domain/epoch model. Different intended outputs are not baseline failures."
+}

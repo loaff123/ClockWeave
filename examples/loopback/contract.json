@@ -1,0 +1,113 @@
+{
+  "schema": "clockweave.contract.v1",
+  "provenance": {
+    "state": "raw",
+    "assumption": "Direct SDK exports before any viewer adjustment. Deliberate fixed instrumentation offsets remain in raw exports.",
+    "evidence": [
+      "examples/loopback/capture.py"
+    ]
+  },
+  "identities": [
+    {
+      "id": "explicit",
+      "select": {},
+      "domain": {
+        "resource_attribute": "clockweave.clock.domain"
+      },
+      "epoch": {
+        "resource_attribute": "clockweave.clock.epoch"
+      },
+      "assumption": "The explicit application-owned domain uses one constant correction per emitted process epoch; A/driver is the stable driver.",
+      "evidence": [
+        "examples/loopback/capture.py: Clock and service lifecycle"
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "fully-consumed",
+      "client": {
+        "names": [
+          "fully-consumed-rpc"
+        ],
+        "kinds": [
+          3
+        ]
+      },
+      "server": {
+        "names": [
+          "handler-before-response"
+        ],
+        "kinds": [
+          2
+        ]
+      },
+      "link": "parent",
+      "relations": [
+        {
+          "kind": "start_order",
+          "slack_ns": "0",
+          "assumption": "Starts before send and after receive",
+          "evidence": [
+            "examples/loopback/capture.py: request and Handler.do_GET"
+          ]
+        },
+        {
+          "kind": "end_enclosure",
+          "slack_ns": "0",
+          "assumption": "Ends before response release and after consumption",
+          "evidence": [
+            "examples/loopback/capture.py: request and Handler.do_GET"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "headers-only-start",
+      "client": {
+        "names": [
+          "client-until-headers"
+        ],
+        "kinds": [
+          3
+        ]
+      },
+      "server": {
+        "names": [
+          "server-through-response-body"
+        ],
+        "kinds": [
+          2
+        ]
+      },
+      "link": "parent",
+      "relations": [
+        {
+          "kind": "start_order",
+          "slack_ns": "0",
+          "assumption": "Client starts before send and server starts after accept; response-end enclosure is not qualified.",
+          "evidence": [
+            "examples/loopback/capture.py: headers branch"
+          ]
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "async",
+      "select": {
+        "kinds": [
+          4,
+          5
+        ]
+      },
+      "reason": "No qualified async semantics"
+    }
+  ],
+  "anchor": {
+    "domain": "A",
+    "epoch": "driver"
+  },
+  "description": "Application-owned Python OpenTelemetry loopback HTTP; timestamp offsets are controlled injections."
+}

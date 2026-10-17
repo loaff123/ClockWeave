@@ -1,0 +1,82 @@
+{
+  "schema": "clockweave.contract.v1",
+  "provenance": {
+    "state": "raw",
+    "assumption": "Direct original fixture",
+    "evidence": [
+      "test fixture"
+    ]
+  },
+  "identities": [
+    {
+      "id": "explicit",
+      "select": {},
+      "domain": {
+        "resource_attribute": "clockweave.clock.domain"
+      },
+      "epoch": {
+        "resource_attribute": "clockweave.clock.epoch"
+      },
+      "assumption": "Declared clocks and epochs",
+      "evidence": [
+        "test fixture"
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "rpc",
+      "client": {
+        "names": [
+          "call"
+        ],
+        "kinds": [
+          3
+        ]
+      },
+      "server": {
+        "names": [
+          "serve"
+        ],
+        "kinds": [
+          2
+        ]
+      },
+      "link": "parent",
+      "relations": [
+        {
+          "kind": "start_order",
+          "slack_ns": "0",
+          "assumption": "Starts before send and after receive",
+          "evidence": [
+            "test fixture"
+          ]
+        },
+        {
+          "kind": "end_enclosure",
+          "slack_ns": "0",
+          "assumption": "Ends before response release and after consumption",
+          "evidence": [
+            "test fixture"
+          ]
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "async",
+      "select": {
+        "kinds": [
+          4,
+          5
+        ]
+      },
+      "reason": "No qualified async semantics"
+    }
+  ],
+  "anchor": {
+    "domain": "A",
+    "epoch": "driver"
+  }
+}

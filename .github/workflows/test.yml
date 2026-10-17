@@ -1,0 +1,45 @@
+name: Test packaged ClockWeave
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: ['3.10', '3.12', '3.13']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install build pytest
+      - run: python -m build
+      - name: Install wheel with optional integration dependencies
+        shell: python
+        run: |
+          import glob, subprocess, sys
+          wheel = glob.glob('dist/*.whl')[0]
+          subprocess.check_call([sys.executable, '-m', 'pip', 'install', wheel + '[integration]'])
+      - name: State optional-check coverage
+        shell: python
+        run: |
+          import importlib.util, os
+          jaeger_enabled = bool(os.environ.get('CLOCKWEAVE_JAEGER_BINARY') and os.environ.get('CLOCKWEAVE_BASELINE_CAPTURE'))
+          lines = [
+              'Jaeger runtime: opt-in enabled; pytest determines the result.' if jaeger_enabled else 'Jaeger runtime: SKIPPED in ordinary CI; both explicit binary and capture paths are required.',
+              'SciPy/HiGHS oracle: NOT RUN by this matrix; use tools/oracle_check.py explicitly.' if importlib.util.find_spec('scipy') else 'SciPy/HiGHS oracle: NOT RUN; the optional development dependency is absent.',
+              'Skipped or unexecuted checks are not passing checks. Standard-library graph tests still run.',
+          ]
+          print('\n'.join(lines))
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
+              summary.write('\n'.join('- ' + line for line in lines) + '\n')
+      - name: Run tests and show skip reasons
+        run: python -m pytest -q -rs
+      - run: clockweave --version
+      - run: clockweave analyze examples/tiny/compatible.otlp.json --contract examples/tiny/contract.json --json report.json --html report.html
+      - run: clockweave verify report.json examples/tiny/compatible.otlp.json --contract examples/tiny/contract.json

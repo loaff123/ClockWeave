@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clockweave"
+version = "0.1.0a1"
+description = "Exact trace-clock consistency under explicit domain and boundary assumptions"
+requires-python = ">=3.10"
+dependencies = []
+license = "MIT"
+readme = "README.md"
+classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Python :: 3", "Operating System :: OS Independent"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "build>=1", "scipy>=1.11"]
+integration = ["opentelemetry-sdk==1.45.1", "opentelemetry-exporter-otlp-proto-http==1.45.1"]
+
+[project.scripts]
+clockweave = "clockweave.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

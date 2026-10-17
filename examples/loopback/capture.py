@@ -7,6 +7,7 @@ No machine clock or OS settings are changed. No calibration claim is made.
 from __future__ import annotations
 import argparse
 import base64
+import faulthandler
 import hashlib
 import json
 import multiprocessing as mp
@@ -66,6 +67,8 @@ def request(clock,url,context=None,headers_only=False,downstream=None):
         if not ended:clock.end(span)
 
 def service(domain,epoch,offset,connection,output):
+    # Preserve a stack trace if startup stalls before the parent readiness deadline.
+    faulthandler.dump_traceback_later(10, repeat=False)
     clock=Clock(domain,epoch,offset)
     class Handler(BaseHTTPRequestHandler):
         def log_message(self,*args):pass
@@ -94,6 +97,7 @@ def service(domain,epoch,offset,connection,output):
         server.shutdown()
     threading.Thread(target=control,daemon=True).start()
     connection.send({'event':'started','domain':domain,'epoch':epoch,'pid':os.getpid(),'port':server.server_port,'observed_time_ns':str(time.time_ns())})
+    faulthandler.cancel_dump_traceback_later()
     try:server.serve_forever(poll_interval=.01)
     finally:
         server.server_close();clock.save(Path(output)/('process-'+epoch+'.pb'))
